@@ -1,0 +1,116 @@
+body{
+    background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.button {
+    position: relative;
+    padding: 1em 1.5em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: 0;
+    font-size: 18px;
+    margin: 1em .8em
+}
+
+.button.type1 {
+    color: #0b81ff
+}
+
+.button.type1.type1::after,
+.button.type1.type1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all .6s ease;
+    border-radius: 2px
+}
+
+.button.type1.type1::after {
+    bottom: 0;
+    right: 0;
+    border-color: transparent #0b81ff #0b81ff transparent
+}
+
+.button.type1.type1::before {
+    top: 0;
+    left: 0;
+    border-color: #0b81ff transparent transparent #0b81ff
+}
+
+.button.type1.type1:hover:after,
+.button.type1.type1:hover:before {
+    width: 100%;
+    height: 100%
+}
+
+.button.type2 {
+    color: #ff0000
+}
+
+.button.type2.type2:after,
+.button.type2.type2:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+    transition: all .3s ease;
+    transform: scale(0.85)
+}
+
+.button.type2.type2:hover:before {
+    top: 0;
+    transform: scale(1)
+}
+
+.button.type2.type2:hover:after {
+    transform: scale(1)
+}
+
+.button.type3 {
+    color: #eeff00
+}
+
+.button.type3.type3::after,
+.button.type3.type3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all .6s ease;
+    border-radius: 2px
+}
+
+.button.type3.type3::after {
+    bottom: 0;
+    right: 0;
+    border-color: transparent #eeff00 #eeff00 transparent
+}
+
+.button.type3.type3::before {
+    top: 0;
+    left: 0;
+    border-color: #eeff00 transparent transparent #eeff00
+}
+
+.button.type3.type3:hover:after,
+.button.type3.type3:hover:before {
+    border-color: #eeff00;
+    width: 100%;
+    height: 100%
+}
